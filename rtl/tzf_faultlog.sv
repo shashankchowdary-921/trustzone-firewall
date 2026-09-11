@@ -13,7 +13,7 @@ module tzf_faultlog #(
   input  wire [ADDR_WIDTH-1:0]  push_addr,
   input  wire [1:0]             push_prot,    // AxPROT[2:1] {inst, ns}
   input  wire [1:0]             push_op,      // 00=R 01=W 10=X
-  input  wire [REGION_W-1:0]    push_region,  // all-ones = no-match
+  input  wire [REGION_W-1:0]    push_region, 
   // read/pop side (config bus)
   input  wire                   rd_en,
   output wire [ENTRY_W-1:0]     rd_data,
