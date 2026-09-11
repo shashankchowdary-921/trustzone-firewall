@@ -1,0 +1,12 @@
+n_regions,taint_en,gate_cells_ge_proxy,logic_depth_levels,policy_cone_levels
+4,0,2280,97,14
+4,1,2750,97,14
+8,0,4262,97,18
+8,1,3708,97,18
+12,0,5918,97,21
+12,1,6511,97,21
+16,0,7440,97,23
+16,1,9027,97,23
+
+tzf_taint_standalone_gates,5
+taint_overhead_pct_by_N,0.22,0.12,0.08,0.07

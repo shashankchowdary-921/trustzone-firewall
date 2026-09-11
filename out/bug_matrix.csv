@@ -1,0 +1,25 @@
+id,class,file,mutation,formal,fuzz,verdict
+M01,priority,tzf_policy.sv,for (i = N_REGIONS-1; i >= 0; i = i - 1),Y,Y,BOTH
+M02,enable-gate,tzf_policy.sv,hit[g] = cfg_enable[g] &&,Y,Y,BOTH
+M03,decode,tzf_policy.sv,(addr & cfg_mask[g*ADDR_WIDTH +: ADDR_WI,Y,Y,BOTH
+M04,class-swap,tzf_policy.sv,wire       ns   = axprot[1];,Y,Y,BOTH
+M05,fetch-bit,tzf_policy.sv,(axprot[2]    ? sel[2] : sel[0]);,Y,Y,BOTH
+M06,op-select,tzf_policy.sv,"is_write      ? sel[1] :
+               ",Y,Y,BOTH
+M07,default-open,tzf_policy.sv,!any ? 1'b0 :,Y,Y,BOTH
+M08,mask-shift,tzf_policy.sv,(addr & cfg_mask[g*ADDR_WIDTH +: ADDR_WI,Y,Y,BOTH
+M09,bypass-stall,tz_firewall.sv,assign s_arready = !rd_pend_q && (rd_gra,Y,N,FORMAL
+M10,data-leak,tz_firewall.sv,assign s_rdata  = rd_pend_q ? {DATA_WIDT,Y,N,FORMAL
+M11,resp-flip,tz_firewall.sv,assign s_bresp  = (ws_state == WS_BERR) ,Y,Y,BOTH
+M12,aw-window,tz_firewall.sv,assign s_awready = (ws_state == WS_IDLE),Y,N,FORMAL
+M13,deadlock,tz_firewall.sv,"end else if (r_int_done) begin
+        r",N,Y,FUZZ
+M14,drain-early,tz_firewall.sv,wire w_drain_done = (ws_state == WS_DRAI,Y,N,FORMAL
+M15,log-spam,tz_firewall.sv,wire block_ev    = rd_block_ev || wr_blo,Y,N,FORMAL
+M16,chan-swap,tz_firewall.sv,".cfg_perm(cfg_perm), .addr(s_awaddr), .a",Y,Y,BOTH
+M17,rlast-hang,tz_firewall.sv,assign s_rlast  = rd_pend_q ? 1'b1      ,Y,N,FORMAL
+M18,ovf-overwrite,tzf_faultlog.sv,if (push_i && !do_push) ovf_sticky <= 1',N,N,UNDETECTED
+M19,int-mask,tzf_faultlog.sv,assign irq      = int_en && ((count != 0,Y,N,FORMAL
+M20,underflow,tzf_faultlog.sv,wire do_pop  = rd_en && (count != 0);,Y,N,FORMAL
+M21,ts-freeze,tzf_faultlog.sv,else        ts_cnt <= ts_cnt + {{(TS_WID,Y,N,FORMAL
+M22,taint-blind,tzf_taint.sv,if ((ar_fire | aw_fire) && !req_ns),N,N,UNDETECTED
