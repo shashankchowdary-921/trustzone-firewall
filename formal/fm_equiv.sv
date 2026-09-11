@@ -1,6 +1,6 @@
 // fm_equiv.s
 // Same config, same stimulus; TAINT_EN=0 (
-// (audit instrumentation). Assert every FUNCTIONAL output bit-identical.
+// (audit instrumentation). Assert every FUNCTIONAL output bit-ident
 // dbg_taint intentionally differs — it IS the instrumentation.
 `default_nettype none
 module fm_equiv (input wire clk);
