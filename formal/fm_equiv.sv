@@ -1,5 +1,5 @@
 // fm_equiv.s
-// Same config, same stimulus; TAINT_EN=0 (production strip) vs TAINT_EN=1
+// Same config, same stimulus; TAINT_EN=0 (
 // (audit instrumentation). Assert every FUNCTIONAL output bit-identical.
 // dbg_taint intentionally differs — it IS the instrumentation.
 `default_nettype none
