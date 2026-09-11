@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """P8 — Seeded security-bug campaign (O3).
 Injects >= 20 security bugs into RTL copies; each must be caught by BOTH
 the formal complete-mediation suite (quick BMC) AND the differential fuzz
