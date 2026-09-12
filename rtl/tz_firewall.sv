@@ -1,4 +1,4 @@
-// tz_firewall.sv — AXI4 TrustZone-style firewall (MICROSPE
+// tz_firewall.sv — AXI4 TrustZone-style firewall (MICROSP
 // Granted traffic: combinational passthrough = ZERO added pipeline stages.
 // Blocked traffic: bounded DECERR response, logged.
 module tz_firewall #(
