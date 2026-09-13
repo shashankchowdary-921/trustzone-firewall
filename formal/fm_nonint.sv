@@ -3,7 +3,7 @@
 // (enable/base/mask + ns perm halves). SECURE perm halves DIFFER arbitrarily.
 // Stimulus restricted to non-secure requests (AxPROT[1]=1).
 // Assert: every master-visible output is IDENTICAL every cycle =>d
-// an NS master provably cannot distinguish the two secure configurations.ssddfsdfsddfdfsd
+// an NS master provably cannot distinguish the two secure configurations.ssddfsdfsddfdfsdsd
 `default_nettype none
 module fm_nonint (input wire clk);
   localparam int NR = 16, AW = 32, DW = 32, IW = 4;
