@@ -1,7 +1,7 @@
 // fm_equiv.s
 // Same config, same stimulus; TAINT_EN=0 (
 // (audit instrumentation). Assert every FUNCTIONAL 
-// dbg_taint intentionally differs — it IS the instrumentation.f
+// dbg_taint intentionally differs — it IS the instrumentation.ff
 `default_nettype none
 module fm_equiv (input wire clk);
   localparam int NR = 16, AW = 32, DW = 32, IW = 4;
