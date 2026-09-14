@@ -1,7 +1,7 @@
 // fm_mediation.sv — HARDENED COMPLETE-MEDIATION PROOF WRAPPER (O1)
 // v2: independent inline reference decision (no shared code with DUT),
 //     write-FSM shadow FSM, RID-integrity shadow, fault-log delta invariant,
-//     irq-equation, timestamp-progress check. Config anyconst => ALL configs.r
+//     irq-equation, timestamp-progress check. Config anyconst => ALL configs.rr
 `default_nettype none
 module fm_mediation (
   input wire clk
